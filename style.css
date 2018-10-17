@@ -8,55 +8,42 @@ body {
 }
 
 h1 {
-    color: #2A2D34;
-    font-size: 40px;
-    font-family: 'Permanent Marker', cursive;
-
+  color: #2A2D34;
+  font-size: 40px;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h2 {
-    font-size: 30px;
-    font-weight: 300;
-    font-family: 'Permanent Marker', cursive;
-
+  font-size: 30px;
+  font-weight: 300;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h3 {
-    font-size: 20px;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-weight: 300;
-
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   padding-top: 2px;
-
 }
 
 a {
-    color: #747474;
-    text-decoration: none;
+  color: #747474;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #41444B;
-}
-
-.img-hover {
-  filter: grayscale(100%);
-
-}
-
-.img-hover:hover {
-  filter: grayscale(0%);
+  color: #41444B;
 }
 
 .container {
-  width: 700px;   /* This sets the width */
-  margin: 0 auto; /* This automatically sets left/right margins */
+  width: 700px;
+  margin: 0 auto;
 }
 
 .card {
@@ -69,13 +56,22 @@ a:hover {
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
+}
+
+.img-hover {
+  filter: grayscale(100%);
+  transition: filter 400ms;
+}
+
+.img-hover:hover {
+  filter: grayscale(0%);
 }
 
 #img_circle {
   border-radius: 100px;
   filter: grayscale(100%);
-
+  transition: filter 400ms;
 }
 
 #img_circle:hover{
@@ -83,37 +79,38 @@ a:hover {
 }
 
 .btn-red {
-
-    cursor: pointer;
-    display: inline-block;
-    letter-spacing: .091em;
-    line-height: 1em;
-    border-style: solid;
-    border-width: 1.1px;
-    border-radius: 2px;
-    padding: 1.8em 3.6em;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: .091em;
+  line-height: 1em;
+  border-style: solid;
+  border-width: 1.1px;
+  border-radius: 2px;
+  padding: 1.8em 3.6em;
+  transition: 0.5s;
 }
 
 .btn-red:hover {
   filter: grayscale(100%);
+  transform: scale(1.05)
 }
 
-.list-inline {
-    padding-left: 0;
+#sidebar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 120px;
+  text-align: center;
+  padding: 20px;
 }
 
-.list-inline li {
-    display: inline-block;
-    padding: 20px;
-}
-
-.fab {
-  font-size: 60px;
-
-}
-.fa {
-
-    font-size: 30px;
+#sidebar li {
+  display: inline-block;
+  list-style: none;
+  padding-left: 0px;
+  margin-top:25px;
+  margin-bottom: 25px;
 }
 
 #movies {
@@ -129,24 +126,57 @@ a:hover {
 #movies td p {
     padding: 20px;
     padding-top: 2px;
-
 }
 
+.list-inline {
+  padding-left: 0px;
+}
+
+.list-inline li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.far {
+  font-size: 55px;
+  color: #BFBFBF;
+  transition: 0.5s;
+}
+
+.far:hover{
+  color: #EFEFEF;
+  transform: rotate(20deg);
+}
+
+.fab {
+  font-size: 60px;
+  transition: 0.5s;
+}
+
+.fab:hover{
+  transform: rotate(20deg);
+}
+
+.fa {
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.fa:hover{
+  transform: rotate(20deg);
+}
 
 @media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
   .container {
     width: 700px;
   }
 }
 @media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
   .container {
     width: 500px;
   }
 }
 @media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
   .container {
     width: 300px;
   }
